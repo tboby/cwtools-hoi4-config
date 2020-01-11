@@ -305,7 +305,7 @@ alias[trigger:dig_in] = float
 alias[trigger:temperature] = int
 
 ### Check that average armor level of combatant is over a certain level.
-## scope = combat
+## scope = general_combat
 alias[trigger:armor] = float
 
 ### Is country at war.
@@ -2060,6 +2060,12 @@ alias[trigger:casualties_k] = int
 ## scope = any
 alias[trigger:meta_trigger] = {
 	text = ignore_field
+	text = {
+		## cardinality = 0..inf
+		scalar
+		## cardinality = 0..inf
+		scalar = scalar
+	}
 	## cardinality = 1..inf
 	scalar = scalar
 }
